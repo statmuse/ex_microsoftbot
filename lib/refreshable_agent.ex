@@ -50,6 +50,14 @@ defmodule ExMicrosoftBot.RefreshableAgent do
         {:noreply, new_state}
       end
 
+      def handle_info(message, state) do
+        Logger.debug(
+          "refreshable_agent: handle_info/2 -> #{inspect(message)} -> #{inspect(state)}"
+        )
+
+        {:noreply, state}
+      end
+
       # Private
 
       @spec get_state() :: any
