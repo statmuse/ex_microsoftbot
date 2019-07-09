@@ -51,7 +51,7 @@ defmodule ExMicrosoftBot.RefreshableAgent do
       end
 
       def handle_info(message, state) do
-        Logger.debug(
+        Logger.info(
           "refreshable_agent: handle_info/2 -> #{inspect(message)} -> #{inspect(state)}"
         )
 
